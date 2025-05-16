@@ -1,37 +1,75 @@
-.invisivel{
-    display:none;
-  }
-  .visivel{
-    display:inline;
-  }
-  .inicial {
-    text-align: center;
-    font-size: 100px;
-    background-color: lightgrey;
-    width: 150px;
-    height: 200px;
-    border: 15px solid green;
-    padding: 10px;
-    margin: 20px;
-  }
-  .acertou {
-    text-align: center;
-    color: yellow;
-    background-color: LawnGreen;
-    width: 150px;
-    height: 200px;
-    border: 15px solid yellow;
-    padding: 10px;
-    margin: 20px;
-  }
-  .errou {
-    text-align: center;
-    font-size: 100px;
-    color: white;
-    background-color: red;
-    width: 150px;
-    height: 200px;
-    border: 15px solid black;
-    padding: 10px;
-    margin: 20px;
-  }
+@font-face {
+  font-family: 'BestTime';
+  src: url('../fonts/Starborn.ttf') format('truetype');
+}
+
+body {
+  font-family: 'BestTime', sans-serif;
+  background-image: url('../img/galaxia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+/* Estilo das cartas iniciais */
+.inicial {
+  text-align: center;
+  font-size: 100px;
+  background-color: lightgrey;
+  width: 150px;
+  height: 200px;
+  border: 15px solid rgba(61, 209, 61, 0.918);
+  padding: 10px;
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+/* Efeito de hover nas cartas */
+.inicial:hover {
+  background-color: rgba(61, 209, 61, 0.918);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(61, 209, 61, 0.918);
+}
+
+/* Cartas que foram acertadas */
+.acertou {
+  text-align: center;
+  color: rgba(255, 255, 0, 0.514);
+  background-color: LawnGreen;
+  width: 150px;
+  height: 200px;
+  border: 15px solid rgba(255, 255, 0, 0.514);
+  padding: 10px;
+  margin: 20px;
+  position: relative;
+}
+
+/* Cartas que foram erradas */
+.errou {
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  background-color: rgba(223, 27, 27, 0.685);
+  width: 150px;
+  height: 200px;
+  border: 15px solid rgb(167, 0, 0);
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Classe para ocultar e mostrar botões */
+.invisivel {
+  display: none;
+}
+
+.visivel {
+  display: inline;
+}
+
